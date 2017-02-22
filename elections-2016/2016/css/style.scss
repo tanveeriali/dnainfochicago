@@ -1,0 +1,444 @@
+$font-stack: "Titillium Web", Helvetica, sans-serif;
+$primary-color: #292925;
+$secondary-color: #fc5158;
+@mixin rotates($degrees) {
+    -ms-transform: rotate($degrees);
+    -webkit-transform: rotate($degrees); 
+    transform: rotate($degrees);
+}
+@mixin widths($values) {
+/* Firefox */
+width: -moz-calc($values);
+/* WebKit */
+width: -webkit-calc($values);
+/* Opera */
+width: -o-calc($values);
+/* Standard */
+width: calc($values);
+}
+@mixin heights($values) {
+/* Firefox */
+height: -moz-calc($values);
+/* WebKit */
+height: -webkit-calc($values);
+/* Opera */
+height: -o-calc($values);
+/* Standard */
+height: calc($values);
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin border-top-right-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+     -moz-border-top-right-radius: $radius;
+      -ms-border-top-right-radius: $radius;
+          border-top-right-radius: $radius;
+}
+@mixin border-top-left-radius($radius) {
+  -webkit-border-top-left-radius: $radius;
+     -moz-border-top-left-radius: $radius;
+      -ms-border-top-left-radius: $radius;
+          border-top-left-radius: $radius;
+}
+@mixin border-bottom-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+     -moz-border-bottom-left-radius: $radius;
+      -ms-border-bottom-left-radius: $radius;
+          border-bottom-left-radius: $radius;
+}
+@mixin border-bottom-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+     -moz-border-bottom-right-radius: $radius;
+      -ms-border-bottom-right-radius: $radius;
+          border-bottom-right-radius: $radius;
+}
+@mixin rotate($degrees) {
+	-webkit-transform: rotate($degrees);
+	-moz-transform: rotate($degrees);
+	-ms-transform: rotate($degrees);
+	-o-transform: rotate($degrees);
+	transform: rotate($degrees);
+}
+$dnared: #fc5158;
+$dnablack: #2e2925;
+$dnagray: #c5c5c5;
+$deepblue: #000b8c;
+$teal: #49c3b1;
+$yellow: #ffdd33;
+$darkred: #d0343a;
+$lightblue1: #00b3e7;
+$lightblue2: #57c9e8;
+$gray11: #423e3a;
+$gray10: #585451;
+$gray9: #6c6966;
+$gray8: #827f7c;
+$gray7: #969492;
+$gray6: #aba9a8;
+$gray5: #c9bebd;
+$gray4: #d5d4d3;
+$gray3: #eae9e9;
+$gray2: #f5f5f5;
+$gray1: #f9f9f9;
+$facebook: #3B5998;
+$twitter: #55ACEE;
+
+
+html,body {
+	margin:0;
+	padding:0;
+	color: $dnablack;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: $gray2;
+    font-family: Georgia,"Times New Roman",Times,serif;
+}
+
+button {
+	@include border-radius(2px);
+	cursor: pointer;
+}
+
+#main {max-width:700px; margin:0 auto;}
+a {color:#0073a3; text-decoration:none;}
+a:hover {text-decoration:underline;}
+em {line-height:20px;}
+/* HEADER */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Titillium Web';
+	font-weight: 600;
+}
+h1 {
+	font-size: 36px;
+	text-align: center;
+	margin-top:40px;
+	margin-bottom: 0px;
+	padding-bottom: 60px;
+}
+#electiontop {max-width:700px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #eae9e9;}
+#electiontop p {
+  max-width: 700px;
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.59;
+  text-align: center;
+  margin: 0 auto;
+  clear: both;
+ }
+	#electiontop p em {font-size:13px;color:#827f7c;}
+
+#mainhed img {
+	height:42px;
+	width:43px;
+}
+	.electionlogo {display:inline;}
+
+#electiontop p.updatetime {
+	margin-top: 10px;
+}
+#pagename {
+  font-family: "Titillium Web";
+  font-size: 22px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.91;
+  text-align: center;
+  margin-bottom: 40px;
+ }
+
+/* SOCIAL */
+
+#social {
+	float: right;
+	position: fixed;
+	right: 20px;
+	top: 10px;
+}
+#social button {
+	width:45px;
+	height:45px;
+	border:0;
+	margin:5px;
+}
+
+#fb {
+	background: url('../img/facebook.svg') center no-repeat;
+	background-color: $facebook;
+	background-size: 20px;
+}
+#fb:hover { background-color: #355089;}
+
+#twitter {
+	background: url('../img/twitter.svg') center no-repeat;
+	background-color: $twitter;
+	background-size: 20px;
+}
+#twitter:hover { background-color:#4c9ad6; }
+
+/* FILTERS */
+
+#filters {
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.selection, .select2-results__option, .select2-results__option--highlighted{
+	width: 300px;
+	min-height: 15px;
+	font-family: "Titillium Web";
+  	font-size: 14px;
+  	font-weight: normal;
+  	font-style: normal;
+  	font-stretch: normal;
+  	line-height: 1.07;
+  	color: #827f7c;
+}
+select {
+	@include border-radius(2px);
+	height:34px;
+	width: 200px;
+	min-height: 35px;
+	margin-right:35px;
+	font-family: "Titillium Web";
+  	font-size: 14px;
+  	font-weight: normal;
+  	font-style: normal;
+  	font-stretch: normal;
+  	line-height: 1.07;
+  	color: #827f7c;
+}
+.select2-container{margin-right:20px;}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  	color: #827f7c;	
+  	line-height:32px;
+  	height:34px;
+}
+.select2 .select2-container .select2-container--default, .select2-container--default .select2-selection--single, .select2-container .select2-selection--single {
+	height:34px;
+}
+.select2-container--open .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {@include border-bottom-right-radius(2px);@include border-bottom-left-radius(2px); }
+
+.select2-container--default .select2-results__option--highlighted[aria-selected],.select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {width:300px; padding-right:0;}
+
+.select2-container--open .select2-dropdown--below {width:300px; 	@include border-top-right-radius(2px);
+	@include border-top-left-radius(2px);
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {color:#827f7c; background: #f5f5f5; border-bottom: solid 1px $gray3;border-top: solid 1px $gray3; border-right: solid 1px $gray3; }
+
+.select2-search__field, input, input:matches([type="password"], [type="search"]) {font-family: "Titillium Web"; border: 1px solid $gray3; background: $gray2;	@include border-radius(2px); padding-top: 10px; padding-bottom:10px;}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {font-family: "Titillium Web"; border: 1px solid $gray3; background: $gray2 url('../img/search.svg') no-repeat 10px 10px; padding-top: 10px; padding-bottom:10px;   padding-left: 30px;@include border-radius(2px); }
+input[type="search"] {  -webkit-appearance: textfield;font-family: "Titillium Web"; border: 1px solid $gray3; background: $gray2 url('../img/search.svg') no-repeat 10px 10px; padding-top: 10px; padding-bottom:10px;   padding-left: 30px;@include border-radius(2px); }
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+	border: none;
+	background: url('../img/arrow.svg');
+}
+
+.select2-container--open .select2-dropdown--below, select2-search select2-search--dropdown, span.select2-dropdown.select2-dropdown--below {	@include border-top-right-radius(2px);	@include border-top-left-radius(2px);}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b  {
+	border: none;
+}
+
+.select2-selection__arrow,.select2-container--default .select2-selection--single .select2-selection__arrow {
+	width: 35px;
+	height: 32px;
+	background: url('../img/arrow.svg') #007ea2 no-repeat center;
+	@include border-top-right-radius(2px);
+	@include border-bottom-right-radius(2px);
+}
+
+.select2-selection__arrow:hover,.select2-container--default .select2-selection--single .select2-selection__arrow:hover {
+ background-color: #0073a2;}
+
+.select2-selection__arrow,.select2-container--open .select2-selection--single .select2-selection__arrow {
+	background: url('../img/arrow.svg') #007ea2 no-repeat center;
+}
+.select2-container--open .select2-selection--single .select2-selection__rendered{color: $dnablack;}
+
+.select2-search--dropdown {background:#ffffff; font-size: 14px; padding: 10px; border-top: 1px solid $gray3; @include border-radius(2px);}
+
+.select2-container--open .select2-dropdown, .select2-dropdown .select2-dropdown--below {top:10px; 	@include border-radius(2px); width: 300px !important;
+}
+
+ .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {height:35px;}
+
+.select2-container--open .select2-selection--single .select2-selection__placeholder {color: $dnablack;}
+
+.select2-container--default .select2-selection--single, .select2-dropdown, .select2-dropdown {border:1px sold $gray3;}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {padding-top: 10px;padding-bottom:10px;}
+
+/* THE RACES */
+#interactive {width: 700px; margin: 0 auto;}
+.contest h3{
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 0;
+  width:100%;
+  padding-bottom:20px;
+  border-bottom: 1px solid $gray3;
+}
+.contest p, h3 p {font-size:13px; font-style:italic; color:#827f7c;line-height:20px; font-family:"Georgia"; font-weight:normal;}
+table {width:100%;	font-family: "Titillium Web";
+    display: table;
+    border-collapse: separate;
+    border-spacing: 0px;
+    border-color: $gray3;
+}
+th {
+	border-bottom: 4px solid #0073a3;
+	width: 100%;
+	text-align: left;
+	padding: 10px 0 10px 20px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	background: $gray2;
+	border-spacing: 0px;
+}
+.candname span {font-size:13px;}
+.candname { width:67%;}
+.votes {width: 33%;}
+.statewide .candname { width:33%;}
+.statewide .votes {width: 33%;}
+.statewide .statevotes {width: 33%;}
+
+.votecount, .statevotecount {color: #827f7c;}
+tr.candidate {background: #ffffff; min-height:60px;
+}
+tr.empty, tr.empty td {height:20px; background-color: $gray2; max-height:20px;}
+tr:first-child {height:20px;}
+td {
+	padding:20px;
+	min-height:60px;
+	padding-right:5px;
+	border-bottom: 1px solid $gray3;
+	border-left: 1px solid $gray3;
+}
+td:first-child {
+	border-left:0;
+}
+tr:last-child td {
+	border-bottom:0;
+}
+td.votes span, td.statevotes span {font-family: "Georgia"; font-size:13px; font-style:italic;}
+tr.winner{background-color: rgba(0, 204, 190, 0.04);}
+tr.winner img {vertical-align: middle;}
+.precincts {
+	font-family: "Georgia";
+	font-size: 13px;
+	font-style: italic;
+	margin-top: 5px;
+	margin-bottom: 40px;
+	color: #827f7c;
+}
+
+/* IPAD PORTRAIT */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { /* STYLES GO HERE */ }
+
+/* ON RESIZE */
+
+@media only screen 
+and (min-width : 375px) 
+and (max-width : 667px) {
+
+	h1 {font-size: 28px; border-bottom: 1px solid #eae9e9; padding-bottom:20px;margin-top:20px;}
+	.electionlogo {display:block;}
+	#electiontop p, #electiontop, #main, #interactive {margin: 0 auto; width:95%;}
+	#filters {width:95%; margin:10px auto;}
+	select,.selection, .select2-results__option, .select2-results__option--highlighted
+ { margin:0 auto;width:100%;}
+	#electiontop p {clear:both;} 
+	#electiontop p.explanation {padding-top:10px;border-top: 1px solid #eae9e9; margin:0 auto; width: 100%;}
+	#social { position: relative;	margin: 0 auto;	width: 114px;	float:none;	right:0;	top:0;	padding:10px 0;}
+
+	.select2-container { margin: 0 auto;}
+	.select2-container--default .select2-results__option--highlighted[aria-selected],.select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {overflow-x: hidden;}
+	span.select2.select2-container.select2-container--default {margin-bottom: 10px; width: 300px;}
+.select2-container--default .select2-search--dropdown .select2-search__field, input, input:matches([type="password"], [type="search"]) {font-family: "Titillium Web"; border: 1px solid $gray3; background: $gray2 url('../img/search.svg') no-repeat 10px 10px;    padding-left: 30px;@include border-radius(2px); padding-top: 10px; padding-bottom:10px;}
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {padding-top: 10px;padding-bottom:10px;}
+
+	th {font-size: 13px; padding-left:5px; padding-right: 5px;}
+	td { font-size:13px;	padding: 5px; padding-top: 10px; padding-bottom: 10px; line-height:16px;}
+	td.votes span, td.statevotes span {font-family: "Georgia"; font-size:10px;}
+	.candname { width:50%;}
+	.votes {width: 50%;}
+
+}
+
+/* ON THE PHONE */
+@media only screen 
+and (min-device-width : 100px) 
+and (max-device-width : 667px) {
+
+	h1 {font-size: 28px; border-bottom: 1px solid #eae9e9; padding-bottom:20px;margin-top:20px;}
+	.electionlogo {display:block;}
+	#electiontop p, #electiontop, #main, #interactive {margin: 0 auto; width:95%;}
+	#filters {width:95%; margin:10px auto;}
+	select,.selection, .select2-results__option, .select2-results__option--highlighted
+ { margin:0 auto;width:100%;}
+	#electiontop p {clear:both;} 
+	#electiontop p.explanation {padding-top:10px;border-top: 1px solid #eae9e9; margin:0 auto; width: 100%;}
+	#social { position: relative;	margin: 0 auto;	width: 114px;	float:none;	right:0;	top:0;	padding:10px 0;}
+	.select2-container--default .select2-results__option--highlighted[aria-selected],.select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {overflow-x: hidden;}
+	.select2-container { margin: 0 auto;}
+	.select2-container--default .select2-results__option--highlighted[aria-selected],.select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {width:100%; padding-right:20px;}
+	span.select2.select2-container.select2-container--default {margin-bottom: 10px; width: 300px;}
+select2 select2-container select2-container--default select2-container--below {width:100%;}
+.select2-container--default .select2-results>.select2-results__options {overflow-x: hidden;}
+.select2-search--dropdown {background:#ffffff; font-size: 14px; padding: 10px; border-top: 1px solid $gray3;}
+.select2-container--default .select2-search--dropdown .select2-search__field {font-family: "Titillium Web"; border: 1px solid $gray3; background: $gray2 url('../img/search.svg') no-repeat 10px 10px;    padding-left: 30px;@include border-radius(2px); padding-top: 10px; padding-bottom:10px;}
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {padding-top: 10px;padding-bottom:10px;}
+
+	th {font-size: 13px; padding-left:5px; padding-right: 5px;}
+	td { font-size:13px;	padding: 5px; padding-top: 10px; padding-bottom: 10px; line-height:16px;}
+	td.votes span, td.statevotes span {font-family: "Georgia"; font-size:10px;}
+	.candname { width:50%;}
+	.votes {width: 50%;}
+
+}
+
+/* ON THE PHONE */
+@media only screen 
+and (min-device-width : 100px) 
+and (max-device-width : 667px) {
+
+	h1 {font-size: 28px; border-bottom: 1px solid #eae9e9; padding-bottom:20px;margin-top:20px;}
+	.electionlogo {display:block;}
+	#electiontop p, #electiontop, #main, #interactive {margin: 0 auto; width:95%;}
+	#filters {width:95%; margin:10px auto;}
+	select,.selection, .select2-results__option, .select2-results__option--highlighted
+ { margin:0 auto;width:100%;}
+	#electiontop p {clear:both;} 
+	#electiontop p.explanation {padding-top:10px;border-top: 1px solid #eae9e9; margin:0 auto; width: 100%;}
+	#social { position: relative;	margin: 0 auto;	width: 114px;	float:none;	right:0;	top:0;	padding:10px 0;}
+	.select2-container--default .select2-results__option--highlighted[aria-selected],.select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {overflow-x: hidden;}
+	.select2-container { margin: 0 auto;}
+	.select2-container--default .select2-results__option--highlighted[aria-selected],.select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {width:100%; padding-right:20px;}
+	span.select2.select2-container.select2-container--default {margin-bottom: 10px; width: 300px;}
+select2 select2-container select2-container--default select2-container--below {width:100%;}
+.select2-container--default .select2-results>.select2-results__options {overflow-x: hidden;}
+.select2-search--dropdown {background:#ffffff; font-size: 14px; padding: 10px; border-top: 1px solid $gray3;}
+.select2-container--default .select2-search--dropdown .select2-search__field {font-family: "Titillium Web"; border: 1px solid $gray3; background: $gray2 url('../img/search.svg') no-repeat 10px 10px;    padding-left: 30px;@include border-radius(2px); padding-top: 10px; padding-bottom:10px;}
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {padding-top: 10px;padding-bottom:10px;}
+
+	th {font-size: 13px; padding-left:5px; padding-right: 5px;}
+	td { font-size:13px;	padding: 5px; padding-top: 10px; padding-bottom: 10px; line-height:16px;}
+	td.votes span, td.statevotes span {font-family: "Georgia"; font-size:10px;}
+	.candname { width:50%;}
+	.votes {width: 50%;}
+
+}

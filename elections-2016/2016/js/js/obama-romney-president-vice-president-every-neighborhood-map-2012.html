@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.13/themes/css/cartodb.css" />
+  <script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.13/cartodb.js"></script>
+  <title>How Every Chicago Neighborhood Voted In The 2012 Presidential Election</title>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <link href="css/select2.css" rel="stylesheet" />
+  <script src="js/select2.min.js"></script>
+  <script src="js/electionsmap.js"></script>
+  <script src="sorttable.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/map.css">
+<script type="infowindow/html" id="infowindow_template">
+  <div class="cartodb-popup v2">
+    <a href="#close" class="cartodb-popup-close-button close">x</a>
+     <div class="cartodb-popup-content-wrapper">
+       <div class="cartodb-popup-header"><h2>Ward {{table_2012_ward}}, Precinct {{table_2012_precinct}} - {{community}}</h2></div>
+       <div class="cartodb-popup-content">
+        <table>
+        <tr><th>Candidate</th><th>Votes</th></tr>
+        <tr class="candidate"><td class="candname">Barack Obama <span>(D)</span></td><td class="votes">{{obamapctprint}}% <span class="votecount">({{barack_obama_joe_biden}})</span></td>
+        <tr class="candidate"><td class="candname">Mitt Romney <span>(R)</span></td><td class="votes">{{romneypctprint}}% <span class="votecount">({{mitt_romney_paul_ryan}})</span></td>
+        <tr class="candidate"><td class="candname">Gary Johnson <span>(L)</span></td><td class="votes">{{johnsonpctprint}}% <span class="votecount">({{gary_johnson_james_p_gray}})</span></td>
+        <tr class="candidate"><td class="candname">Jill Stein <span>(G)</span></td><td class="votes">{{steinpctprint}}% <span class="votecount">({{jill_stein_howie_hawkins}})</span></td>
+        </table>
+       </div>
+     </div>
+     <div class="cartodb-popup-tip-container"></div>
+  </div>
+</script>
+
+</head>
+<body onload="init()">
+<div id="fb-root"></div>
+  
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  
+  <div id="main">
+      <div id="electiontop">
+        <h1 id="mainhed"><div class='electionlogo'><img src='img/election.svg' /></div><span style='font-family:Georgia;font-weight:normal;'> How Every Chicago Neighborhood Voted In The 2012 Presidential Election</span></h1>
+        <div id="social"></div>
+        <p class="explanation">During the 2012 presidential election, 84 percent of Chicagoans voted to re-elect eventual winner Barack Obama. This map shows how presidential vote took shape in over 2,000 election precincts.</p>
+        <p class="updatetime"></p>
+      </div>
+
+      <div id="interactive">
+          <div id="menu">
+              <button><a href="#demvrep" id="demvrep" class="button selected demvrep"><strong>Head-to-Head</strong></a></button>
+              <button><a href="#dem" id="dem" class="button dem"><strong>Obama Vote Share</strong></a></button>
+              <button><a href="#rep" id="rep" class="button rep"><strong>Romney Vote Share</strong></a></button>
+          </div>
+          <div id="map"></div>
+                <p><img src='img/election.svg' width="20"/>  <a href="https://www.dnainfo.com/chicago/numbers/citywide-election-results-voting-general-primary-illinois" target="_blank" style="font-weight:bold;">Go to DNAinfo's 2016 Voter Guide.</a></p>
+      <div id="filters" style="padding-top:20px;padding-bottom:20px; border-bottom:1px solid #eae9e9;">
+      </div>
+      </div>
+    </div>
+<script type="text/javascript" src="https://spreadsheets.google.com/feeds/list/1H4WTJVe8wiAhqm3Wp_l9pvmovYX1IuTjGL3GHbocF0Q/1/public/values?alt=json-in-script&callback=electionResults"></script>
+</body>
+</html>

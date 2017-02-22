@@ -1,0 +1,698 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #2e2925;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  font-family: Georgia,"Times New Roman",Times,serif; }
+
+button {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer; }
+
+#main {
+  max-width: 700px;
+  margin: 0 auto; }
+
+a {
+  color: #0073a3;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+em {
+  line-height: 20px; }
+
+/* HEADER */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Titillium Web';
+  font-weight: 600; }
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 0px;
+  padding-bottom: 60px; }
+
+#electiontop {
+  max-width: 700px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eae9e9; }
+
+#electiontop p {
+  max-width: 700px;
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.59;
+  text-align: center;
+  margin: 0 auto;
+  clear: both; }
+
+#electiontop p em {
+  font-size: 13px;
+  color: #827f7c; }
+
+#mainhed img {
+  height: 42px;
+  width: 43px; }
+
+.electionlogo {
+  display: inline; }
+
+#electiontop p.updatetime {
+  margin-top: 10px; }
+
+#pagename {
+  font-family: "Titillium Web";
+  font-size: 22px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.91;
+  text-align: center;
+  margin-bottom: 40px; }
+
+/* SOCIAL */
+#social {
+  float: right;
+  position: fixed;
+  right: 20px;
+  top: 10px; }
+
+#social button {
+  width: 45px;
+  height: 45px;
+  border: 0;
+  margin: 5px; }
+
+#fb {
+  background: url("../img/facebook.svg") center no-repeat;
+  background-color: #3B5998;
+  background-size: 20px; }
+
+#fb:hover {
+  background-color: #355089; }
+
+#twitter {
+  background: url("../img/twitter.svg") center no-repeat;
+  background-color: #55ACEE;
+  background-size: 20px; }
+
+#twitter:hover {
+  background-color: #4c9ad6; }
+
+/* FILTERS */
+#filters {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.selection, .select2-results__option, .select2-results__option--highlighted {
+  width: 300px;
+  min-height: 15px;
+  font-family: "Titillium Web";
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.07;
+  color: #827f7c; }
+
+select {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  height: 34px;
+  width: 200px;
+  min-height: 35px;
+  margin-right: 35px;
+  font-family: "Titillium Web";
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.07;
+  color: #827f7c; }
+
+.select2-container {
+  margin-right: 20px; }
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #827f7c;
+  line-height: 32px;
+  height: 34px; }
+
+.select2 .select2-container .select2-container--default, .select2-container--default .select2-selection--single, .select2-container .select2-selection--single {
+  height: 34px; }
+
+.select2-container--open .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+  -webkit-border-bottom-right-radius: 2px;
+  -moz-border-bottom-right-radius: 2px;
+  -ms-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-bottom-left-radius: 2px;
+  -ms-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px; }
+
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {
+  width: 300px;
+  padding-right: 0; }
+
+.select2-container--open .select2-dropdown--below {
+  width: 300px;
+  -webkit-border-top-right-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  -ms-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-top-left-radius: 2px;
+  -ms-border-top-left-radius: 2px;
+  border-top-left-radius: 2px; }
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  color: #827f7c;
+  background: #f5f5f5;
+  border-bottom: solid 1px #eae9e9;
+  border-top: solid 1px #eae9e9;
+  border-right: solid 1px #eae9e9; }
+
+.select2-search__field, input, input:matches([type="password"], [type="search"]) {
+  font-family: "Titillium Web";
+  border: 1px solid #eae9e9;
+  background: #f5f5f5;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  font-family: "Titillium Web";
+  border: 1px solid #eae9e9;
+  background: #f5f5f5 url("../img/search.svg") no-repeat 10px 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  font-family: "Titillium Web";
+  border: 1px solid #eae9e9;
+  background: #f5f5f5 url("../img/search.svg") no-repeat 10px 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px; }
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border: none;
+  background: url("../img/arrow.svg"); }
+
+.select2-container--open .select2-dropdown--below, select2-search select2-search--dropdown, span.select2-dropdown.select2-dropdown--below {
+  -webkit-border-top-right-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  -ms-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-top-left-radius: 2px;
+  -ms-border-top-left-radius: 2px;
+  border-top-left-radius: 2px; }
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border: none; }
+
+.select2-selection__arrow, .select2-container--default .select2-selection--single .select2-selection__arrow {
+  width: 35px;
+  height: 32px;
+  background: url("../img/arrow.svg") #007ea2 no-repeat center;
+  -webkit-border-top-right-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  -ms-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -moz-border-bottom-right-radius: 2px;
+  -ms-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px; }
+
+.select2-selection__arrow:hover, .select2-container--default .select2-selection--single .select2-selection__arrow:hover {
+  background-color: #0073a2; }
+
+.select2-selection__arrow, .select2-container--open .select2-selection--single .select2-selection__arrow {
+  background: url("../img/arrow.svg") #007ea2 no-repeat center; }
+
+.select2-container--open .select2-selection--single .select2-selection__rendered {
+  color: #2e2925; }
+
+.select2-search--dropdown {
+  background: #ffffff;
+  font-size: 14px;
+  padding: 10px;
+  border-top: 1px solid #eae9e9;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px; }
+
+.select2-container--open .select2-dropdown, .select2-dropdown .select2-dropdown--below {
+  top: 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  width: 300px !important; }
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+  height: 35px; }
+
+.select2-container--open .select2-selection--single .select2-selection__placeholder {
+  color: #2e2925; }
+
+.select2-container--default .select2-selection--single, .select2-dropdown, .select2-dropdown {
+  border: 1px sold #eae9e9; }
+
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+/* THE RACES */
+#interactive {
+  width: 700px;
+  margin: 0 auto; }
+
+.contest h3 {
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 0;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eae9e9; }
+
+.contest p, h3 p {
+  font-size: 13px;
+  font-style: italic;
+  color: #827f7c;
+  line-height: 20px;
+  font-family: "Georgia";
+  font-weight: normal; }
+
+table {
+  width: 100%;
+  font-family: "Titillium Web";
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0px;
+  border-color: #eae9e9; }
+
+th {
+  border-bottom: 4px solid #0073a3;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0 10px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  background: #f5f5f5;
+  border-spacing: 0px; }
+
+.candname span {
+  font-size: 13px; }
+
+.candname {
+  width: 67%; }
+
+.votes {
+  width: 33%; }
+
+.statewide .candname {
+  width: 33%; }
+
+.statewide .votes {
+  width: 33%; }
+
+.statewide .statevotes {
+  width: 33%; }
+
+.votecount, .statevotecount {
+  color: #827f7c; }
+
+tr.candidate {
+  background: #ffffff;
+  min-height: 60px; }
+
+tr.empty, tr.empty td {
+  height: 20px;
+  background-color: #f5f5f5;
+  max-height: 20px; }
+
+tr:first-child {
+  height: 20px; }
+
+td {
+  padding: 20px;
+  min-height: 60px;
+  padding-right: 5px;
+  border-bottom: 1px solid #eae9e9;
+  border-left: 1px solid #eae9e9; }
+
+td:first-child {
+  border-left: 0; }
+
+tr:last-child td {
+  border-bottom: 0; }
+
+td.votes span, td.statevotes span {
+  font-family: "Georgia";
+  font-size: 13px;
+  font-style: italic; }
+
+tr.winner {
+  background-color: rgba(0, 204, 190, 0.04); }
+
+tr.winner img {
+  vertical-align: middle; }
+
+.precincts {
+  font-family: "Georgia";
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  color: #827f7c; }
+
+/* IPAD PORTRAIT */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* STYLES GO HERE */ }
+/* ON RESIZE */
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  h1 {
+    font-size: 28px;
+    border-bottom: 1px solid #eae9e9;
+    padding-bottom: 20px;
+    margin-top: 20px; }
+
+  .electionlogo {
+    display: block; }
+
+  #electiontop p, #electiontop, #main, #interactive {
+    margin: 0 auto;
+    width: 95%; }
+
+  #filters {
+    width: 95%;
+    margin: 10px auto; }
+
+  select, .selection, .select2-results__option, .select2-results__option--highlighted {
+    margin: 0 auto;
+    width: 100%; }
+
+  #electiontop p {
+    clear: both; }
+
+  #electiontop p.explanation {
+    padding-top: 10px;
+    border-top: 1px solid #eae9e9;
+    margin: 0 auto;
+    width: 100%; }
+
+  #social {
+    position: relative;
+    margin: 0 auto;
+    width: 114px;
+    float: none;
+    right: 0;
+    top: 0;
+    padding: 10px 0; }
+
+  .select2-container {
+    margin: 0 auto; }
+
+  .select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {
+    overflow-x: hidden; }
+
+  span.select2.select2-container.select2-container--default {
+    margin-bottom: 10px;
+    width: 300px; }
+
+  .select2-container--default .select2-search--dropdown .select2-search__field, input, input:matches([type="password"], [type="search"]) {
+    font-family: "Titillium Web";
+    border: 1px solid #eae9e9;
+    background: #f5f5f5 url("../img/search.svg") no-repeat 10px 10px;
+    padding-left: 30px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+  .select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+  th {
+    font-size: 13px;
+    padding-left: 5px;
+    padding-right: 5px; }
+
+  td {
+    font-size: 13px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 16px; }
+
+  td.votes span, td.statevotes span {
+    font-family: "Georgia";
+    font-size: 10px; }
+
+  .candname {
+    width: 50%; }
+
+  .votes {
+    width: 50%; } }
+/* ON THE PHONE */
+@media only screen and (min-device-width: 100px) and (max-device-width: 667px) {
+  h1 {
+    font-size: 28px;
+    border-bottom: 1px solid #eae9e9;
+    padding-bottom: 20px;
+    margin-top: 20px; }
+
+  .electionlogo {
+    display: block; }
+
+  #electiontop p, #electiontop, #main, #interactive {
+    margin: 0 auto;
+    width: 95%; }
+
+  #filters {
+    width: 95%;
+    margin: 10px auto; }
+
+  select, .selection, .select2-results__option, .select2-results__option--highlighted {
+    margin: 0 auto;
+    width: 100%; }
+
+  #electiontop p {
+    clear: both; }
+
+  #electiontop p.explanation {
+    padding-top: 10px;
+    border-top: 1px solid #eae9e9;
+    margin: 0 auto;
+    width: 100%; }
+
+  #social {
+    position: relative;
+    margin: 0 auto;
+    width: 114px;
+    float: none;
+    right: 0;
+    top: 0;
+    padding: 10px 0; }
+
+  .select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {
+    overflow-x: hidden; }
+
+  .select2-container {
+    margin: 0 auto; }
+
+  .select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {
+    width: 100%;
+    padding-right: 20px; }
+
+  span.select2.select2-container.select2-container--default {
+    margin-bottom: 10px;
+    width: 300px; }
+
+  select2 select2-container select2-container--default select2-container--below {
+    width: 100%; }
+
+  .select2-container--default .select2-results > .select2-results__options {
+    overflow-x: hidden; }
+
+  .select2-search--dropdown {
+    background: #ffffff;
+    font-size: 14px;
+    padding: 10px;
+    border-top: 1px solid #eae9e9; }
+
+  .select2-container--default .select2-search--dropdown .select2-search__field {
+    font-family: "Titillium Web";
+    border: 1px solid #eae9e9;
+    background: #f5f5f5 url("../img/search.svg") no-repeat 10px 10px;
+    padding-left: 30px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+  .select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+  th {
+    font-size: 13px;
+    padding-left: 5px;
+    padding-right: 5px; }
+
+  td {
+    font-size: 13px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 16px; }
+
+  td.votes span, td.statevotes span {
+    font-family: "Georgia";
+    font-size: 10px; }
+
+  .candname {
+    width: 50%; }
+
+  .votes {
+    width: 50%; } }
+/* ON THE PHONE */
+@media only screen and (min-device-width: 100px) and (max-device-width: 667px) {
+  h1 {
+    font-size: 28px;
+    border-bottom: 1px solid #eae9e9;
+    padding-bottom: 20px;
+    margin-top: 20px; }
+
+  .electionlogo {
+    display: block; }
+
+  #electiontop p, #electiontop, #main, #interactive {
+    margin: 0 auto;
+    width: 95%; }
+
+  #filters {
+    width: 95%;
+    margin: 10px auto; }
+
+  select, .selection, .select2-results__option, .select2-results__option--highlighted {
+    margin: 0 auto;
+    width: 100%; }
+
+  #electiontop p {
+    clear: both; }
+
+  #electiontop p.explanation {
+    padding-top: 10px;
+    border-top: 1px solid #eae9e9;
+    margin: 0 auto;
+    width: 100%; }
+
+  #social {
+    position: relative;
+    margin: 0 auto;
+    width: 114px;
+    float: none;
+    right: 0;
+    top: 0;
+    padding: 10px 0; }
+
+  .select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {
+    overflow-x: hidden; }
+
+  .select2-container {
+    margin: 0 auto; }
+
+  .select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {
+    width: 100%;
+    padding-right: 20px; }
+
+  span.select2.select2-container.select2-container--default {
+    margin-bottom: 10px;
+    width: 300px; }
+
+  select2 select2-container select2-container--default select2-container--below {
+    width: 100%; }
+
+  .select2-container--default .select2-results > .select2-results__options {
+    overflow-x: hidden; }
+
+  .select2-search--dropdown {
+    background: #ffffff;
+    font-size: 14px;
+    padding: 10px;
+    border-top: 1px solid #eae9e9; }
+
+  .select2-container--default .select2-search--dropdown .select2-search__field {
+    font-family: "Titillium Web";
+    border: 1px solid #eae9e9;
+    background: #f5f5f5 url("../img/search.svg") no-repeat 10px 10px;
+    padding-left: 30px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+  .select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-results__option {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+  th {
+    font-size: 13px;
+    padding-left: 5px;
+    padding-right: 5px; }
+
+  td {
+    font-size: 13px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 16px; }
+
+  td.votes span, td.statevotes span {
+    font-family: "Georgia";
+    font-size: 10px; }
+
+  .candname {
+    width: 50%; }
+
+  .votes {
+    width: 50%; } }
